@@ -22,7 +22,7 @@ It is sample RESTful API project using Falcon framework.
 ## Endpoints
 | Endpoint  	| Method  	| Request body  	| Description |
 |---	|---	|---	|---	|
-| /api/  	| GET  	| None  	| Returns status of an API.   	|
+| /api/  	| GET  	| None  	| Returns status of an API   	|
 | /api/groups  	| GET  	| None  	| Returns all groups  	|
 |   	| POST  	| Fields by GroupSchema  	| Creates new group  	|
 | /api/groups/{id}  	| GET  	| None  	| Returns single group  	|
