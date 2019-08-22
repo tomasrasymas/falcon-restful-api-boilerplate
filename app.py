@@ -7,16 +7,14 @@ from resources.item import ItemResource
 from resources.group_items import GroupItemsResource
 from resources.group_item import GroupItemResource
 from utils.exceptions import handler
-from middlewares.require_json import RequireJson
 from middlewares.db_session import DbSessionManager
 from db import Session
 
 
 def get_app() -> falcon.API:
-    app = falcon.API(middleware=[DbSessionManager(Session=Session),
-                                 RequireJson()])
+    app = falcon.API(middleware=[DbSessionManager(Session=Session)])
 
-    app.add_route('/api/', ApiIndexResource())
+    app.add_route('/api', ApiIndexResource())
     app.add_route('/api/groups', GroupsResource())
     app.add_route('/api/groups/{id}', GroupResource())
     app.add_route('/api/items', ItemsResource())

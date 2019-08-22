@@ -11,7 +11,8 @@ def parse(schema: schema, request: request) -> (dict, dict):
         if not result:
             if hasattr(e, 'messages'):
                 result = e.messages
-        raise RequestParsingError(description='Unable to parse request body into schema object.',
+
+        raise RequestParsingError(description='Unable to parse request body into schema object. %s' % str(e),
                                   errors=result)
 
     return result
