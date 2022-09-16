@@ -1,6 +1,6 @@
 alembic==1.0.11
 falcon==2.0.0
-Mako==1.1.0
+Mako==1.2.2
 MarkupSafe==1.1.1
 marshmallow==3.0.0rc9
 python-dateutil==2.8.0
